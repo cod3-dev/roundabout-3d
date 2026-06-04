@@ -69,8 +69,8 @@ function createCarFallback() {
 }
 
 async function loadLevelOBJ() {
-  // Assumes the user has copied extracted level assets into public/level/.
-  // Specifically: level.obj and level.mtl should exist.
+  // Assumes the user has copied extracted level assets into the 3d folder.
+  // Specifically: 3d/level/level.obj and 3d/level/level.mtl should exist.
   // If your names differ, update here.
   const objUrl = '/level/level.obj';
   const mtlUrl = '/level/level.mtl';
@@ -129,7 +129,7 @@ async function loadLevelOBJ() {
 
 async function loadCarsGLB() {
   // Recommended: user exports/places cars model as GLB.
-  // Put it at public/cars/LowPolyCars.glb
+  // Put it at 3d/cars/LowPolyCars.glb
   try {
     const gltfLoader = new GLTFLoader();
     const gltf = await new Promise((resolve, reject) => {
